@@ -1,0 +1,12 @@
+<div class="video_list">
+  <ul id="video_ul" >
+    <app-video *ngFor="let video of videoList"
+            [id]="video.id"
+            [duration]="video.duration"
+            [size]="video.size"
+            [title]="video.title"
+            [url]="video.url"
+            [view]="video.view">
+    </app-video>
+  </ul>
+</div>
