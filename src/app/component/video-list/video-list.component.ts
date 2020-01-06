@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {VideoListService} from '../../service/video-list/video-list.service';
-import {VideoList} from '../../model/video-list/video-list';
+import {Video} from '../../model/video/video';
 
 @Component({
   selector: 'app-video-list',
@@ -12,7 +12,7 @@ export class VideoListComponent implements OnInit {
 
   categoryNumber : number;
   message : string;
-  private videoList: VideoList[];
+  private videoList: Video[];
 
   constructor(private route:ActivatedRoute,
               private router:Router,

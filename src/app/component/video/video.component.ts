@@ -13,6 +13,7 @@ export class VideoComponent implements OnInit {
   @Input() view:number;
   @Input() duration:number;
   @Input() size:number;
+  @Input() createDate:Date;
 
   id2:number;
   title2:string;
