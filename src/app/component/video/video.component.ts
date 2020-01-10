@@ -21,6 +21,7 @@ export class VideoComponent implements OnInit {
   view2:number;
   duration2:number;
   size2:number;
+  createDate2:Date;
 
   constructor() { }
 
@@ -31,6 +32,7 @@ export class VideoComponent implements OnInit {
     this.view2 = this.view;
     this.duration2 = this.duration;
     this.size2 = this.size;
+    this.createDate2 = this.createDate;
   }
 
 }

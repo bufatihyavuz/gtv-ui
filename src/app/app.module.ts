@@ -7,9 +7,9 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './layout/navbar/navbar.module';
 import { SidebarModule } from './layout/sidebar/sidebar.module';
+import { ModalModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
-
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 
 
@@ -22,7 +22,8 @@ import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.compone
     HttpClientModule,
     NavbarModule,
     SidebarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule.forRoot()
   ],
   declarations: [
     AppComponent,
@@ -30,6 +31,8 @@ import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.compone
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
+  entryComponents: [VideoModalComponent]
 })
 export class AppModule { }
