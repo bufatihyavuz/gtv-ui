@@ -9,6 +9,7 @@ import { NguiMapModule} from '@ngui/map';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 import {VideoListComponent} from '../../component/video-list/video-list.component';
 import { VideoComponent } from '../../component/video/video.component';
+import {VideoFormComponent} from '../../component/video-form/video-form.component';
 
 
 
@@ -22,7 +23,8 @@ import { VideoComponent } from '../../component/video/video.component';
   ],
   declarations: [
     VideoListComponent,
-    VideoComponent
+    VideoComponent,
+    VideoFormComponent
   ]
 })
 
