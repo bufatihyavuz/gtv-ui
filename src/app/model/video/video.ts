@@ -6,4 +6,5 @@ export class Video {
     duration:number;
     size:number;
     createDate:Date;
+    category:number;
 }
