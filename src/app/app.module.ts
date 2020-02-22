@@ -11,6 +11,9 @@ import { ModalModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { VideoModalComponent } from './component/video-modal/video-modal.component';
+import { VideoFormComponent } from './component/video-form/video-form.component';
+
 
 
 
@@ -27,8 +30,8 @@ import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.compone
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent
-
+    AdminLayoutComponent,
+    VideoModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

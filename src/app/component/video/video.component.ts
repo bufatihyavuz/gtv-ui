@@ -1,4 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Injector, Input, OnInit} from '@angular/core';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap';
+import {VideoModalComponent} from '../video-modal/video-modal.component';
+import {ModalConfig} from '../../util/modal-config';
 
 @Component({
   selector: 'app-video',
@@ -23,7 +26,14 @@ export class VideoComponent implements OnInit {
   size2:number;
   createDate2:Date;
 
-  constructor() { }
+  modalRef: BsModalRef;
+  modalService: BsModalService;
+
+  constructor(
+      private injector: Injector
+  ) {
+    this.modalService = injector.get(BsModalService);
+  }
 
   ngOnInit() {
     this.id2 = this.id;
@@ -35,4 +45,11 @@ export class VideoComponent implements OnInit {
     this.createDate2 = this.createDate;
   }
 
+    showModal(urlParam: string, title: string ) {
+      const initialState =  {
+        videoId : urlParam,
+        title : title,
+      };
+      this.modalRef = this.modalService.show(VideoModalComponent,ModalConfig.specialgetConfig(initialState,true,true,false));
+    }
 }
