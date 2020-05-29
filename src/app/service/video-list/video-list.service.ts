@@ -7,11 +7,11 @@ import {Video} from '../../model/video/video';
   providedIn: 'root'
 })
 export class VideoListService {
-  videoList = AppConfig.localURL + 'videos';
+  videoURL = AppConfig.localURL + 'videos';
 
   constructor(private http: HttpClient) { }
 
   getVideoListByCategory(categoryId : number){
-      return this.http.get<Video[]>(this.videoList + "/" +categoryId);
+      return this.http.get<Video[]>(this.videoURL + "/categories/" +categoryId);
   }
 }
